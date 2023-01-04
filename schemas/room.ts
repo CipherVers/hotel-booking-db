@@ -9,6 +9,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'mainImage',
+        title: 'Main Image',
+        type: 'image',
+      },
+      {
         name: 'hotel',
         title: 'Hotel',
         type: 'reference',
@@ -33,6 +38,12 @@ export default {
         name: 'currency',
         title: 'Currency',
         type: 'string',
+      },
+      {
+        name: 'images',
+        title: 'Images',
+        type: 'array',
+        of: [{ type: 'image' }],
       },
       {
         name: 'amenities',

@@ -4,14 +4,29 @@ export default {
     type: 'document',
     fields: [
       {
-        name: 'hotelId',
-        title: 'Hotel ID',
+        name: 'bookingId',
+        title: 'Booking ID',
         type: 'string',
       },
       {
-        name: 'roomType',
-        title: 'Room Type',
-        type: 'string',
+        name: 'client',
+        title: 'Client',
+        type: 'array',
+        of: [
+          {
+            type: 'reference',
+            to: [{ type: 'client' }] 
+          }]
+      },
+      {
+        name: 'hotel',
+        title: 'Hotel',
+        type: 'reference', to: [{ type: 'hotel' }] 
+      },
+      {
+        name: 'Room',
+        title: 'Room',
+        type: 'reference', to: [{ type: 'room' }] 
       },
       {
         name: 'checkInDate',

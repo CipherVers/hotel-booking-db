@@ -9,9 +9,41 @@ export default {
         type: 'string',
       },
       {
-        name: 'location',
-        title: 'Location',
+        name: 'mainImage',
+        title: 'Main Image',
+        type: 'image',
+      },
+      {
+        name: 'isfull',
+        title: 'Is Full',
+        type: 'boolean',
+      },
+      {
+        name: 'address',
+        title: 'Address',
         type: 'string',
+      },
+      {
+        name: 'gpsCoordinates',
+        title: 'GPS Coordinates',
+        type: 'object',
+        fields: [
+          {
+            name: 'latitude',
+            title: 'Latitude',
+            type: 'number',
+          },
+          {
+            name: 'longitude',
+            title: 'Longitude',
+            type: 'number',
+          },
+        ],
+      },
+      {
+        name: 'specialIndications',
+        title: 'Special Indications',
+        type: 'text',
       },
       {
         name: 'description',
@@ -41,6 +73,29 @@ export default {
         type: 'array',
         of: [{ type: 'reference', to: [{ type: 'room' }] }],
       },
+      {
+        name: 'specialConditions',
+        title: 'Special Conditions',
+        type: 'array',
+        of: [
+          {
+            type: 'object',
+            fields: [
+              {
+                name: 'name',
+                title: 'Name',
+                type: 'string',
+              },
+              {
+                name: 'description',
+                title: 'Description',
+                type: 'text',
+              },
+            ],
+          },
+        ],
+      },
+      
     ],
   }
   
