@@ -9,6 +9,15 @@ export default {
         type: 'string',
       },
       {
+        name: 'slug',
+        title: 'Slug',
+        type: 'slug',
+        options: {
+          source: 'name',
+          maxLength: 96,
+        },
+      },
+      {
         name: 'avatar',
         title: 'Avatar',
         type: 'image',
@@ -56,6 +65,16 @@ export default {
                 name: 'avatarSrc',
                 title: 'Avatar Src',
                 type: 'string',
+              },
+              {
+                name: 'token',
+                title: 'Token',
+                type: 'string',
+              },
+              {
+                name: 'expiration',
+                title: 'Expiration',
+                type: 'date',
               },
             ],
           },

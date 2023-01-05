@@ -4,6 +4,15 @@ export default {
     type: 'document',
     fields: [
       {
+        name: 'slug',
+        title: 'Slug',
+        type: 'slug',
+        options: {
+          source: 'hotel',
+          maxLength: 96,
+        },
+      },
+      {
         name: 'type',
         title: 'Type',
         type: 'string',
