@@ -1,7 +1,7 @@
 
 export default {
-    name: 'listingStayDetail',
-    title: 'Listing Stay Detail',
+    name: 'stayRental',
+    title: 'stayRental',
     type: 'document',
     fields: [
       {
